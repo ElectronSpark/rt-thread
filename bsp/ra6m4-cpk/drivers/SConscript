@@ -16,6 +16,9 @@ if GetDepend(['BSP_USING_SERIAL']):
         print("\nThe current project does not support serial-v1\n")
         Return('group')
 
+if GetDepend(['RT_USING_PWM']):
+    src += ['drv_pwm.c']
+
 if GetDepend(['BSP_USING_PIN']):
     src += ['drv_gpio.c']
 

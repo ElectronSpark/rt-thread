@@ -24,6 +24,10 @@
     #endif
 #endif
 
+#ifdef RT_USING_PWM
+#include <drv_pwm.h>
+#endif
+
 #ifdef RT_USING_FINSH
 #include <finsh.h>
 static void reboot(uint8_t argc, char **argv)
@@ -127,6 +131,12 @@ RT_WEAK void rt_hw_board_init()
     /* USART driver initialization is open by default */
 #ifdef RT_USING_SERIAL
     rt_hw_usart_init();
+#endif
+
+    
+    /* PWM driver initialization is open by default */
+#ifdef RT_USING_PWM
+    rt_hw_pwm_init();
 #endif
 
     /* Set the shell console output device */

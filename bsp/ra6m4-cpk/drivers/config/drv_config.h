@@ -21,6 +21,10 @@ extern "C" {
 #ifdef SOC_SERIES_R7FA6M4AF
 #include "ra6m4/uart_config.h"
 
+#ifdef RT_USING_PWM
+#include "ra6m4/pwm_config.h"
+#endif
+
 #ifdef RT_USING_ADC
 #include "ra6m4/adc_config.h"
 #endif

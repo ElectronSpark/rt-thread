@@ -87,6 +87,7 @@
 #define RT_USING_SERIAL_V2
 #define RT_SERIAL_USING_DMA
 #define RT_USING_PIN
+#define RT_USING_PWM
 
 /* Using USB */
 
@@ -143,6 +144,11 @@
 
 /* multimedia packages */
 
+/* LVGL: powerful and easy-to-use embedded GUI library */
+
+
+/* u8g2: a monochrome graphic library */
+
 
 /* tools packages */
 
@@ -163,7 +169,6 @@
 
 /* miscellaneous packages */
 
-
 /* samples: kernel and components samples */
 
 
@@ -183,6 +188,8 @@
 #define BSP_USING_UART7
 #define BSP_UART7_RX_BUFSIZE 256
 #define BSP_UART7_TX_BUFSIZE 0
+#define BSP_USING_PWM
+#define BSP_USING_PWM3
 
 /* Board extended module Drivers */
 
